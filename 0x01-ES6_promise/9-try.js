@@ -4,7 +4,7 @@ export default function guardrail(mathFunction) {
   try {
     queue.push(mathFunction());
   } catch (err) {
-    queue.push('Error: cannot divide by o');
+    queue.push(String(err));
   } finally {
     queue.push('Guardrail was processed');
   }
